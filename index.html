@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Encriptador de texto</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <!-- !---------------------------------------------- -->
+    <header class="header">
+      <img src="./Imagines/A.svg" class="aSvg" />
+    </header>
+    <!-- !---------------------------------------------- -->
+    <main class="layout">
+      <section class="main">
+        <textarea
+          class="txtInicio"
+          type="text"
+          id="txtInicio"
+          placeholder="Ingrese el texto aqui"
+          autofocus
+        ></textarea>
+        <div>
+          <div class="spanUp">
+            <img src="./Imagines/!.svg" alt="" />
+            <span> Solo letras minúsculas y sin acentos </span>
+          </div>
+          <div>
+            <button id="encriptar"><span>Encriptar </span></button>
+            <button class="desencriptar" id="desencriptar">
+              <span>Desencriptar</span>
+            </button>
+          </div>
+        </div>
+      </section>
+ 
+      <!-- !---------------------------------------------- -->
+      <section id="main2" class="main2">
+        <div id="ocutarImg">
+          <img src="./Imagines/Muñeco.svg" alt="" />
+          <span>Ningún mensaje fue encontrado</span><br />
+          <span>Ingresa el texto que desees encriptar o desencriptar.</span>
+        </div>
+        <div id="ocutar" class="ocutarCss">
+          <textarea id="txtFinal" class="textareaFinal" disabled> </textarea>
+          <button id="copiar">Copiar</button>
+        </div>
+      </section>
+      <!-- !---------------------------------------------- -->
+       <div class="footer">
+        Create by Michel Silva
+        <a href="https://github.com/N-S-LEHCIM?tab=repositories">
+          <img  src="https://img.icons8.com/sf-black-filled/30/1A1A1A/github.png"/>
+        </a>
+
+        <a href="https://www.linkedin.com/in/michelsilvanakassugui/">
+          <img src="https://img.icons8.com/color/30/null/linkedin.png"/>
+        </a>
+       </div>  
+  </body>
+</html>
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="./script.js"></script>

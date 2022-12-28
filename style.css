@@ -1,0 +1,249 @@
+:root {
+  --color-dark-gray: #495057;
+  --color-white: white;
+  --color-gray: #d8dfe8;
+  --color-dark-blue: #0a3871;
+  --color-body: #e5e5e5;
+  --tipografia: @import
+    url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+}
+
+body {
+  background: var(--color-body);
+}
+.header {
+  margin: 30px;
+  width: 120px;
+  height: 48px;
+}
+.layout {
+  height: 80vh;
+  display: grid;
+  grid:
+    "main main2" 1fr
+    "footer footer" 1fr;
+}
+.main {
+  width: 1000px;
+  grid-area: main;
+  display: flex;
+  align-content: flex-end;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+.main2 {
+  width: 400px;
+  grid-area: main2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--color-white);
+  box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+  border-radius: 32px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.footer {
+  grid-area: footer;
+  width: 100%;
+  height: 10%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  padding-top: 20px;
+}
+textarea {
+  width: 80%;
+  height: 500px;
+  resize: none;
+  border: none;
+  outline: none;
+  font-size: 1.5rem;
+  background: none;
+  color: var(--color-dark-blue);
+}
+
+button {
+  margin: 12px;
+  padding: 24px;
+  width: 328px;
+  height: 67px;
+  background: var(--color-dark-blue);
+  border-radius: 24px;
+  cursor: pointer;
+  border: 1px solid var(--color-dark-blue);
+}
+button:hover {
+  background: var(--color-gray);
+}
+button:hover span {
+  color: var(--color-dark-blue);
+}
+.desencriptar {
+  background: var(--color-gray);
+  border: 1px solid var(--color-dark-blue);
+}
+.desencriptar:hover {
+  background: var(--color-dark-blue);
+}
+.desencriptar:hover span {
+  color: var(--color-white);
+}
+.desencriptar span {
+  width: 280px;
+  height: 19px;
+  font-family: var(--tipografia);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  color: var(--color-dark-blue);
+}
+span {
+  width: 280px;
+  height: 19px;
+  font-family: var(--tipografia);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  color: var(--color-white);
+}
+.spanUp {
+  padding-bottom: 16px;
+}
+.spanUp span {
+  width: 205px;
+  height: 18px;
+  font-family: var(--tipografia);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 150%;
+  color: var(--color-dark-gray);
+  opacity: 0.8;
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+}
+.txtInicio::placeholder {
+  color: var(--color-dark-blue);
+}
+/*!--------------------- Class Main2 --------------------- */
+.main2 div {
+  width: 80%;
+  text-align: center;
+}
+.textareaFinal {
+  width: 100%;
+}
+.main2 div span:nth-child(n + 1) {
+  font-family: var(--tipografia);
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 120%;
+  color: var(--color-dark-gray);
+}
+
+.main2 div span:nth-child(n + 3) {
+  width: 336px;
+  font-family: var(--tipografia);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  color: var(--color-dark-gray);
+}
+.main2 button {
+  background: var(--color-white);
+}
+.main2 button:hover {
+  background: var(--color-dark-blue);
+  color: var(--color-white);
+}
+/*!--------------------- Ocutar Elementos --------------------- */
+.ocutarCss {
+  display: none;
+}
+.ocutarImg {
+  display: none;
+}
+.showImg {
+  display: contents;
+}
+/*!--------------------- Media Queries --------------------- */
+@media (max-width: 800px) {
+  .layout {
+    height: 100vh;
+    display: grid;
+    grid:
+      "main" 1fr
+      "main2" 0.5fr
+      "footer" 0.5fr;
+    justify-items: center;
+  }
+  .header {
+    height: 119px;
+  }
+  .main {
+    width: 100%;
+  }
+  .main textarea {
+    height: 50vh;
+  }
+  .main2 {
+    text-align: center;
+    width: 90%;
+    height: 30%;
+  }
+  .mainDespues {
+    height: auto;
+  }
+  .main2 div textarea {
+    width: 100%;
+  }
+  .main2 div img {
+    display: none;
+  }
+  .main2 {
+    margin-top: 20px;
+  }
+  #ocutar button {
+    width: 100%;
+  }
+  #ocutar textarea {
+    margin-top: 30px;
+  }
+  .footer {
+    padding-top: 30px;
+  }
+}
+/*!--------------------- Media Queries --------------------- */
+@media (max-width: 430px) {
+  .layout {
+    height: 100vh;
+    display: grid;
+    grid:
+      "main" 1fr
+      "main2" 0.5fr
+      "footer" 0.5fr;
+    justify-items: center;
+    align-items: flex-end;
+  }
+  .main textarea {
+    height: 50vh;
+    width: 100%;
+  }
+  .main2 {
+    text-align: center;
+    width: 90%;
+    height: auto;
+  }
+}
